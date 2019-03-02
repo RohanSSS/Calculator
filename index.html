@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="index.js"></script>
+<html>
+<header>
+  <title>Calculator</title>
+  <link rel="stylesheet" href="index.css">
+</header>
+
+<body>
+  <h1>Calculator</h1>
+
+  <div id="calculator" class="calculator">
+
+    <button id="clear" class="clear" onClick="clearAll()">C</button>
+
+    <div id="view" class="view">0</div>
+
+    <button class="num" onclick="setNum('7')">7</button>
+    <button class="num" onclick="setNum('8')">8</button>
+    <button class="num" onclick="setNum('9')">9</button>
+    <button class="operator" onclick="setOperator('plus')">+</button>
+
+    <button class="num" onclick="setNum('4')">4</button>
+    <button class="num" onclick="setNum('5')">5</button>
+    <button class="num" onclick="setNum('6')">6</button>
+    <button class="operator" onclick="setOperator('minus')">-</button>
+
+    <button class="num" onclick="setNum('1')">1</button>
+    <button class="num" onclick="setNum('2')">2</button>
+    <button class="num" onclick="setNum('3')">3</button>
+    <button class="operator" onclick="setOperator('multiply')">*</button>
+
+    <button class="num" onclick="setNum('0')">0</button>
+    <button class="num" onclick="setNum('.')">.</button>
+    <button id="equals" class="equals" onClick="displayNum()">=</button>
+    <button class="operator" onclick="setOperator('divide')">/</button>
+  </div>
+
+</body>
+
+</html>
