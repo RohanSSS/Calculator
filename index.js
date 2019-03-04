@@ -3,68 +3,62 @@ let currentNum = "";
 let oldNum = "";
 let resultNum;
 let operator;
-console.log("js file exists");
 
 function setNum(num) {
   let view = document.querySelector("#view");
   console.log("set num run");
   if (resultNum) {
-    currentNum = num;
-    resultNum = "";
+    var currentNum = num;
+    var resultNum = "";
   } else if (currentNum.includes(".") && num == ".") {
-    console.log("only one decimal point allowed")
   } else {
-    currentNum += num;
+    var currentNum += num;
   }
   view.innerHTML = currentNum;
 };
 
 function setOperator(op) {
-  console.log("set op run");
-  oldNum = currentNum;
-  currentNum = "";
-  operator = op;
+  var oldNum = currentNum;
+  var currentNum = "";
+  var operator = op;
 };
 
 function displayNum() {
   let view = document.querySelector("#view");
-  console.log("display num run");
-  oldNum = parseFloat(oldNum);
-  currentNum = parseFloat(currentNum);
+  var oldNum = parseFloat(oldNum);
+  var currentNum = parseFloat(currentNum);
 
   switch (operator) {
     case "plus":
-      resultNum = oldNum + currentNum;
+      var resultNum = oldNum + currentNum;
       break;
     case "minus":
-      resultNum = oldNum - currentNum;
+      var resultNum = oldNum - currentNum;
       break;
     case "multiply":
-      resultNum = oldNum * currentNum;
+      var resultNum = oldNum * currentNum;
       break;
     case "divide":
-      resultNum = oldNum / currentNum;
+      var resultNum = oldNum / currentNum;
       break;
     default:
-      resultNum = currentNum;
+      var resultNum = currentNum;
   }
 
-  if (!isFinite(resultNum)) {
-    if (isNaN(resultNum)) {
-      resultNum = "Error: not a number";
-    } else {
-      resultNum = "Error: cannot divide by zero";
-    }
+  if (!isFinite(resultNum) && isNaN(resultNum)) {
+    var resultNum = "Error: not a number";
+  } else {
+    var resultNum = "Error: cannot divide by zero";
   }
-  view.innerHTML = resultNum;
-  oldNum = 0;
-  currentNum = resultNum;
+  
+  const view.innerHTML = resultNum;
+  let oldNum = 0;
+  let currentNum = resultNum;
 };
 
 function clearAll() {
-  console.log("clear all run")
   let view = document.querySelector("#view");
-  oldNum = "";
-  currentNum = "";
-  view.innerHTML = "0";
+  var oldNum = "";
+  var currentNum = "";
+  var view.innerHTML = "0";
 };
