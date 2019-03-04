@@ -6,7 +6,6 @@ let operator;
 
 function setNum(num) {
   let view = document.querySelector("#view");
-  console.log("set num run");
   if (resultNum) {
     var currentNum = num;
     var resultNum = "";
@@ -61,4 +60,5 @@ function clearAll() {
   var oldNum = "";
   var currentNum = "";
   var view.innerHTML = "0";
+  console.log("z" + "u" + "b" + "z");
 };
